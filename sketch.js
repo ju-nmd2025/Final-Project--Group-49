@@ -11,12 +11,12 @@ let gravity = 0.5;
 let score = 0;
 let highestScore = 0;
 let gameState = 'menu'; // 'menu', 'playing', 'gameover'
-let cameraY = 0; // Theo dõi độ cao camera
+let cameraY = 0; // Theo dõi độ cao camera - Camera height
 let maxHeight = 0;
 
-// Hiệu ứng
+// Hiệu ứng - Effect
 let starField = [];
-let showInstructions = false; // BIẾN MỚI: Kiểm soát hiển thị hướng dẫn
+let showInstructions = false; // BIẾN MỚI: Kiểm soát hiển thị hướng dẫn - Instruction Appeared
 
 // ===================================
 // HƯỚNG DẪN: PHẦN TẢI HÌNH ẢNH
@@ -589,4 +589,5 @@ class Particle {
   isDead() {
     return this.life <= 0;
   }
+
 }
