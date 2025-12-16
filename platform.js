@@ -20,3 +20,10 @@ class Platform {
       if (abs(this.position.x - this.originalX) > this.moveRange) {
         this.direction *= -1;
       }
+    }
+  }
+
+   show() {
+    if (this.broken) {
+      // Animation broken (vẫn giữ code vẽ)
+      push();
