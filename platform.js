@@ -27,3 +27,11 @@ class Platform {
     if (this.broken) {
       // Animation broken (vẫn giữ code vẽ)
       push();
+      translate(this.position.x + this.width/2, this.position.y + this.height/2);
+      rotate(frameCount * 0.1);
+      fill(139, 69, 19, 150);
+      rect(-this.width/2, -this.height/2, this.width/2, this.height/2, 3);
+      rect(0, 0, this.width/2, this.height/2, 3);
+      pop();
+      return;
+    }
