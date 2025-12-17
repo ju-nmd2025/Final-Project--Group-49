@@ -54,3 +54,22 @@ class Platform {
             img = platformNormalImg;
             break;
     }
+
+     if (img) {
+        // Nếu hình ảnh đã được tải (img), vẽ hình ảnh đó.
+        image(img, this.position.x, this.position.y, this.width, this.height);
+    } else {
+      // Nếu chưa tải, vẫn dùng hình vẽ bằng code cũ
+      
+      // Vẽ theo loại platform
+      if (this.type === 'normal') {
+        // Platform xanh lá với gradient
+        let c1 = color(100, 220, 100);
+        let c2 = color(70, 180, 70);
+        
+        for (let i = 0; i < this.height; i++) {
+          let inter = map(i, 0, this.height, 0, 1);
+          stroke(lerpColor(c1, c2, inter));
+          line(this.position.x, this.position.y + i, 
+               this.position.x + this.width, this.position.y + i);
+        }
