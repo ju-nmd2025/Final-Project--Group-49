@@ -16,4 +16,19 @@
             font-family: 'Arial', sans-serif;
             overflow: hidden;
         }
+         canvas {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            border-radius: 15px;
+            border: 5px solid rgba(255,255,255,0.3);
+            display: block;
+        }
         
+        /* Đã xóa các phần .controls và .legend để chúng chỉ hiển thị trong canvas */
+        
+        .footer {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
