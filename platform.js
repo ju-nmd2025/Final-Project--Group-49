@@ -35,3 +35,22 @@ class Platform {
       pop();
       return;
     }
+
+    push();
+    
+    // ===================================
+    // BƯỚC 3: THAY ẢNH PLATFORM TẠI ĐÂY
+    // ===================================
+    let img;
+    switch (this.type) {
+        case 'moving':
+            img = platformMovingImg;
+            break;
+        case 'breakable':
+            img = platformBreakableImg;
+            break;
+        case 'normal':
+        default:
+            img = platformNormalImg;
+            break;
+    }
