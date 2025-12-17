@@ -86,4 +86,24 @@ class Platform {
                this.position.x + this.width, this.position.y + i);
         }
    
-        
+        // Hiệu ứng di chuyển (mũi tên)
+        noStroke();
+        fill(255, 255, 255, 150);
+        let arrowX = this.position.x + this.width/2;
+        let arrowY = this.position.y + this.height/2;
+        triangle(arrowX - 5 * this.direction, arrowY, 
+                 arrowX + 10 * this.direction, arrowY,
+                 arrowX + 2 * this.direction, arrowY - 4);
+        triangle(arrowX - 5 * this.direction, arrowY, 
+                 arrowX + 10 * this.direction, arrowY,
+                 arrowX + 2 * this.direction, arrowY + 4);
+
+        // ========== SPRING CLASS ==========
+class Spring {
+  constructor(x, y) {
+    this.position = createVector(x, y);
+    this.width = 25;
+    this.height = 30;
+    this.used = false;
+    this.compression = 0; // Animation nén lò xo
+  }
