@@ -73,3 +73,10 @@ class Platform {
           line(this.position.x, this.position.y + i, 
                this.position.x + this.width, this.position.y + i);
         }
+        
+        else if (this.type === 'moving') {
+        // Platform xanh dương chuyển động
+        let c1 = color(100, 200, 255);
+        let c2 = color(50, 150, 255);
+      
+        
