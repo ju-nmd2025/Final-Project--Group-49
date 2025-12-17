@@ -78,5 +78,12 @@ class Platform {
         // Platform xanh dương chuyển động
         let c1 = color(100, 200, 255);
         let c2 = color(50, 150, 255);
-      
+
+        for (let i = 0; i < this.height; i++) {
+          let inter = map(i, 0, this.height, 0, 1);
+          stroke(lerpColor(c1, c2, inter));
+          line(this.position.x, this.position.y + i, 
+               this.position.x + this.width, this.position.y + i);
+        }
+   
         
