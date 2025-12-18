@@ -107,3 +107,15 @@ class Spring {
     this.used = false;
     this.compression = 0; // Animation nén lò xo
   }
+
+  show() {
+    if (this.used && this.compression <= 0) return;
+    
+    push();
+    translate(this.position.x, this.position.y);
+    
+    // Nén lò xo khi dùng
+    if (this.used) {
+      this.compression = max(0, this.compression - 0.15);
+    }
+    
