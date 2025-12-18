@@ -187,3 +187,9 @@ class Monster {
       stroke(120, 50, 170);
       strokeWeight(2);
       ellipse(0, 0, this.width, this.height);
+
+  // Sừng
+      fill(180, 100, 220);
+      triangle(-10, -20, -15, -30, -5, -20);
+      triangle(10, -20, 15, -30, 5, -20);
+      
