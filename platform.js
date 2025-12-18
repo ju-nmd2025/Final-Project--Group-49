@@ -197,4 +197,11 @@ class Monster {
       fill(0);
       ellipse(-10, -3, 6, 8);
       ellipse(10, -3, 6, 8);
+
+  // Miệng (răng nanh)
+      fill(50);
+      arc(0, 5, 20, 15, 0, PI);
       
+      fill(255);
+      triangle(-8, 5, -5, 15, -2, 5);
+      triangle(2, 5, 5, 15, 8, 5);
