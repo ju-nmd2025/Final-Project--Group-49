@@ -157,4 +157,10 @@ class Spring {
     if (this.used) return false;
     
         return doodle.position.x + doodle.width > this.position.x &&
+        doodle.position.x < this.position.x + this.width &&
+        doodle.position.y + doodle.height > this.position.y &&
+        doodle.position.y < this.position.y + this.height;
+  }
+}
+
 
