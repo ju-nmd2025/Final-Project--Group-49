@@ -192,4 +192,9 @@ class Monster {
       fill(180, 100, 220);
       triangle(-10, -20, -15, -30, -5, -20);
       triangle(10, -20, 15, -30, 5, -20);
+
+  // Đồng tử
+      fill(0);
+      ellipse(-10, -3, 6, 8);
+      ellipse(10, -3, 6, 8);
       
