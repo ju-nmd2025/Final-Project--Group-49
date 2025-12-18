@@ -165,4 +165,10 @@ class Spring {
 
 // ========== MONSTER CLASS ==========
 class Monster {
-
+ constructor(x, y) {
+    this.position = createVector(x, y);
+    this.width = 45;
+    this.height = 45;
+    this.angle = 0; // Cho animation
+    this.offsetY = 0; // Bay lên xuống
+ }
