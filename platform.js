@@ -111,6 +111,35 @@ class Platform {
                  arrowX + 10 * this.direction, arrowY,
                  arrowX + 2 * this.direction, arrowY + 4);
 
+      } else if (this.type === 'breakable') {
+        // Platform nâu vỡ được
+        fill(139, 69, 19);
+        stroke(101, 50, 13);
+        strokeWeight(2);
+        rect(this.position.x, this.position.y, this.width, this.height, 5);
+        
+        // Vân gỗ
+        noStroke();
+        fill(160, 82, 45, 150);
+        for (let i = 0; i < 4; i++) {
+          let lineX = this.position.x + (i + 1) * this.width / 5;
+          rect(lineX, this.position.y, 2, this.height);
+        }
+        
+        // Nứt (để biết nó dễ vỡ)
+        stroke(80, 40, 10);
+        strokeWeight(1.5);
+        line(this.position.x + this.width/2 - 5, this.position.y,
+             this.position.x + this.width/2 + 5, this.position.y + this.height);
+        line(this.position.x + this.width/3, this.position.y + 5,
+             this.position.x + this.width/3 + 10, this.position.y + this.height - 5);
+      }
+    }
+    
+    pop();
+  }
+}
+
 // ========== SPRING CLASS ==========
 class Spring {
   constructor(x, y) {
