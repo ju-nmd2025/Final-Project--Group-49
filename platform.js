@@ -263,7 +263,6 @@ class Monster {
       stroke(255, 50, 50, 100);
       strokeWeight(2);
       ellipse(0, 0, this.width + sin(frameCount * 0.2) * 5, this.height + sin(frameCount * 0.2) * 5);
-    }
   
     pop();
   }
