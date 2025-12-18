@@ -152,3 +152,6 @@ class Spring {
     
     pop();
   }
+
+  collidesWith(doodle) {
+    if (this.used) return false;
