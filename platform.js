@@ -20,6 +20,17 @@ class Platform {
       if (abs(this.position.x - this.originalX) > this.moveRange) {
         this.direction *= -1;
       }
+      
+      // Giữ trong màn hình
+      if (this.position.x < 0) {
+        this.position.x = 0;
+        this.direction = 1;
+      } else if (this.position.x + this.width > width) {
+        this.position.x = width - this.width;
+        this.direction = -1;
+      }
+    }
+  }
     }
   }
 
