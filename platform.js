@@ -172,3 +172,8 @@ class Monster {
     this.angle = 0; // Cho animation
     this.offsetY = 0; // Bay lên xuống
  }
+
+  update() {
+    this.angle += 0.1;
+    this.offsetY = sin(this.angle) * 5;
+  }
