@@ -199,7 +199,7 @@ class Spring {
           fill(255, 255, 100, 100 + sin(frameCount * 0.1) * 50);
           ellipse(12.5, 12, 30, 30);
         }
-      }
+
     
       pop();
   }
