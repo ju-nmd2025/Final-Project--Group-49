@@ -181,4 +181,9 @@ class Monster {
   show() {
     push();
     translate(this.position.x + this.width/2, this.position.y + this.height/2 + this.offsetY);
-    
+
+  // Thân quái vật (tím)
+      fill(150, 80, 200);
+      stroke(120, 50, 170);
+      strokeWeight(2);
+      ellipse(0, 0, this.width, this.height);
