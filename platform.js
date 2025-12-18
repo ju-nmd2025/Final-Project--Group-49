@@ -111,7 +111,7 @@ class Platform {
                  arrowX + 10 * this.direction, arrowY,
                  arrowX + 2 * this.direction, arrowY + 4);
 
-        // ========== SPRING CLASS ==========
+// ========== SPRING CLASS ==========
 class Spring {
   constructor(x, y) {
     this.position = createVector(x, y);
@@ -132,13 +132,13 @@ class Spring {
       this.compression = max(0, this.compression - 0.15);
     }
 
-    // Đế lò xo
+      // Đế lò xo
       fill(200, 50, 50);
       stroke(150, 30, 30);
       strokeWeight(2);
       rect(0, 25 - this.compression * 10, this.width, 5, 2);
       
-    // Lò xo (zigzag)
+      // Lò xo (zigzag)
       noFill();
       stroke(255, 200, 50);
       strokeWeight(3);
@@ -149,21 +149,21 @@ class Spring {
         let y = map(i, 0, segments, 0, 20 - this.compression * 10);
         vertex(x, y);
       }
-    endShape();
+      endShape();
 
-    // Đỉnh lò xo
-    fill(255, 200, 50);
-    noStroke();
-    ellipse(12.5, -2, 12, 8);
-
-    // Hiệu ứng sáng khi chưa dùng
-    if (!this.used) {
-        fill(255, 255, 100, 100 + sin(frameCount * 0.1) * 50);
-        ellipse(12.5, 12, 30, 30);
+      // Đỉnh lò xo
+      fill(255, 200, 50);
+      noStroke();
+      ellipse(12.5, -2, 12, 8);
+  
+      // Hiệu ứng sáng khi chưa dùng
+      if (!this.used) {
+          fill(255, 255, 100, 100 + sin(frameCount * 0.1) * 50);
+          ellipse(12.5, 12, 30, 30);
+        }
       }
-    }
     
-    pop();
+      pop();
   }
 
   collidesWith(doodle) {
