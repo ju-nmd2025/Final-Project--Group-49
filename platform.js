@@ -137,4 +137,8 @@ class Spring {
         vertex(x, y);
       }
       endShape();
-      
+
+    // Đỉnh lò xo
+      fill(255, 200, 50);
+      noStroke();
+      ellipse(12.5, -2, 12, 8);
