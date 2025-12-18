@@ -118,4 +118,3 @@ class Spring {
     if (this.used) {
       this.compression = max(0, this.compression - 0.15);
     }
-    
