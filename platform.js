@@ -218,5 +218,8 @@ class Monster {
   
     collidesWith(doodle) {
     let distance = dist(
-    doodle.position.x + doodle.width / 2,
-    doodle.position.y + doodle.height / 2,
+      doodle.position.x + doodle.width / 2,
+      doodle.position.y + doodle.height / 2,
+      this.position.x + this.width/2,
+      this.position.y + this.height/2
+    );
