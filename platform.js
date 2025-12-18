@@ -149,15 +149,15 @@ class Spring {
         let y = map(i, 0, segments, 0, 20 - this.compression * 10);
         vertex(x, y);
       }
-      endShape();
+    endShape();
 
     // Đỉnh lò xo
-      fill(255, 200, 50);
-      noStroke();
-      ellipse(12.5, -2, 12, 8);
+    fill(255, 200, 50);
+    noStroke();
+    ellipse(12.5, -2, 12, 8);
 
     // Hiệu ứng sáng khi chưa dùng
-      if (!this.used) {
+    if (!this.used) {
         fill(255, 255, 100, 100 + sin(frameCount * 0.1) * 50);
         ellipse(12.5, 12, 30, 30);
       }
@@ -169,10 +169,10 @@ class Spring {
   collidesWith(doodle) {
     if (this.used) return false;
     
-        return doodle.position.x + doodle.width > this.position.x &&
-        doodle.position.x < this.position.x + this.width &&
-        doodle.position.y + doodle.height > this.position.y &&
-        doodle.position.y < this.position.y + this.height;
+    return doodle.position.x + doodle.width > this.position.x &&
+           doodle.position.x < this.position.x + this.width &&
+           doodle.position.y + doodle.height > this.position.y &&
+           doodle.position.y < this.position.y + this.height;
   }
 }
 
@@ -184,7 +184,7 @@ class Monster {
     this.height = 45;
     this.angle = 0; // Cho animation
     this.offsetY = 0; // Bay lên xuống
- }
+  }
 
   update() {
     this.angle += 0.1;
@@ -195,23 +195,24 @@ class Monster {
     push();
     translate(this.position.x + this.width/2, this.position.y + this.height/2 + this.offsetY);
 
-  // Thân quái vật (tím)
+    
+      // Thân quái vật (tím)
       fill(150, 80, 200);
       stroke(120, 50, 170);
       strokeWeight(2);
       ellipse(0, 0, this.width, this.height);
 
-  // Sừng
+      // Sừng
       fill(180, 100, 220);
       triangle(-10, -20, -15, -30, -5, -20);
       triangle(10, -20, 15, -30, 5, -20);
 
-  // Đồng tử
+      // Đồng tử
       fill(0);
       ellipse(-10, -3, 6, 8);
       ellipse(10, -3, 6, 8);
 
-  // Miệng (răng nanh)
+      // Miệng (răng nanh)
       fill(50);
       arc(0, 5, 20, 15, 0, PI);
       
@@ -219,7 +220,7 @@ class Monster {
       triangle(-8, 5, -5, 15, -2, 5);
       triangle(2, 5, 5, 15, 8, 5);
 
-  // Hiệu ứng nguy hiểm
+      // Hiệu ứng nguy hiểm
       noFill();
       stroke(255, 50, 50, 100);
       strokeWeight(2);
@@ -229,7 +230,7 @@ class Monster {
     pop();
   }
   
-    collidesWith(doodle) {
+  collidesWith(doodle) {
     let distance = dist(
       doodle.position.x + doodle.width / 2,
       doodle.position.y + doodle.height / 2,
