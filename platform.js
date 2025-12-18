@@ -212,7 +212,10 @@ class Monster {
       strokeWeight(2);
       ellipse(0, 0, this.width + sin(frameCount * 0.2) * 5, this.height + sin(frameCount * 0.2) * 5);
     }
-
+  
+    pop();
+  }
+  
     collidesWith(doodle) {
     let distance = dist(
     doodle.position.x + doodle.width / 2,
