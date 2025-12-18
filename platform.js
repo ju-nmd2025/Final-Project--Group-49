@@ -155,3 +155,6 @@ class Spring {
 
   collidesWith(doodle) {
     if (this.used) return false;
+    
+        return doodle.position.x + doodle.width > this.position.x &&
+
