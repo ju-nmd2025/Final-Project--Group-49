@@ -31,9 +31,7 @@ class Platform {
       }
     }
   }
-    }
-  }
-
+    
    show() {
     if (this.broken) {
       // Animation broken (vẫn giữ code vẽ)
