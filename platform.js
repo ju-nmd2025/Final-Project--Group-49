@@ -163,4 +163,6 @@ class Spring {
   }
 }
 
+// ========== MONSTER CLASS ==========
+class Monster {
 
