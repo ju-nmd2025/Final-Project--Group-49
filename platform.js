@@ -205,3 +205,10 @@ class Monster {
       fill(255);
       triangle(-8, 5, -5, 15, -2, 5);
       triangle(2, 5, 5, 15, 8, 5);
+
+    // Hiệu ứng nguy hiểm
+      noFill();
+      stroke(255, 50, 50, 100);
+      strokeWeight(2);
+      ellipse(0, 0, this.width + sin(frameCount * 0.2) * 5, this.height + sin(frameCount * 0.2) * 5);
+    }
