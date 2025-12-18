@@ -125,3 +125,16 @@ class Spring {
       strokeWeight(2);
       rect(0, 25 - this.compression * 10, this.width, 5, 2);
       
+    // Lò xo (zigzag)
+      noFill();
+      stroke(255, 200, 50);
+      strokeWeight(3);
+      beginShape();
+      let segments = 6;
+      for (let i = 0; i <= segments; i++) {
+        let x = (i % 2 === 0) ? 5 : 20;
+        let y = map(i, 0, segments, 0, 20 - this.compression * 10);
+        vertex(x, y);
+      }
+      endShape();
+      
