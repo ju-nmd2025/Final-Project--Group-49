@@ -73,7 +73,20 @@ class Platform {
           line(this.position.x, this.position.y + i, 
                this.position.x + this.width, this.position.y + i);
         }
+
+        // Viền trắng phía trên
+        stroke(255, 255, 255, 200);
+        strokeWeight(2);
+        noFill();
+        line(this.position.x + 5, this.position.y + 2, 
+             this.position.x + this.width - 5, this.position.y + 2);
         
+        // Bo góc
+        noStroke();
+        fill(100, 220, 100);
+        rect(this.position.x, this.position.y, this.width, this.height, 8);
+
+         
       } else if (this.type === 'moving') {
         // Platform xanh dương chuyển động
         let c1 = color(100, 200, 255);
