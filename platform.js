@@ -213,7 +213,7 @@ class Monster {
       ellipse(0, 0, this.width + sin(frameCount * 0.2) * 5, this.height + sin(frameCount * 0.2) * 5);
     }
   
-    pop();
+  pop();
   }
   
     collidesWith(doodle) {
