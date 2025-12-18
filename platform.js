@@ -142,3 +142,13 @@ class Spring {
       fill(255, 200, 50);
       noStroke();
       ellipse(12.5, -2, 12, 8);
+
+    // Hiệu ứng sáng khi chưa dùng
+      if (!this.used) {
+        fill(255, 255, 100, 100 + sin(frameCount * 0.1) * 50);
+        ellipse(12.5, 12, 30, 30);
+      }
+    }
+    
+    pop();
+  }
