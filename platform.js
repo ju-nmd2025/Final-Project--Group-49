@@ -118,3 +118,10 @@ class Spring {
     if (this.used) {
       this.compression = max(0, this.compression - 0.15);
     }
+
+    // Đế lò xo
+      fill(200, 50, 50);
+      stroke(150, 30, 30);
+      strokeWeight(2);
+      rect(0, 25 - this.compression * 10, this.width, 5, 2);
+      
