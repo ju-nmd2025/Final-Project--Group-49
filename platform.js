@@ -223,3 +223,7 @@ class Monster {
       this.position.x + this.width/2,
       this.position.y + this.height/2
     );
+
+    return distance < (this.width + doodle.width) / 2.5;
+  }
+}
