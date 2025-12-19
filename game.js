@@ -31,7 +31,7 @@ let monsterImg;
 
 // function preload() { //cái này để thay ảnh nhân vật và mấy bước nhảy nhé 
 
-// //   doodleImg = loadImage('ten_anh_nhan_vat.png'); // ví dụ nè 
+// //   doodleImg = loadImage('example_doodle_image.png'); // ví dụ nè 
 // // //   platformNormalImg = loadImage('ten_anh_platform_thuong.png');
 // // //   platformMovingImg = loadImage('ten_anh_platform_di_dong.png');
 // // //   platformBreakableImg = loadImage('ten_anh_platform_vo.png');
@@ -591,4 +591,5 @@ class Particle {
   }
 
 }
+
 
