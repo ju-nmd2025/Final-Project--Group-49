@@ -304,7 +304,7 @@ function drawLegendBox() {
     fill(100, 120, 240);
     textSize(20);
     textAlign(CENTER, CENTER);
-    text("📋 Chú Thích & Điều Khiển", 0, -165);
+    text("How to play?", 0, -165);
 
     // --- Thiết lập text ---
     textAlign(LEFT, CENTER);
@@ -316,33 +316,33 @@ function drawLegendBox() {
     // --- Điều Khiển ---
     fill(100, 120, 240);
     textSize(16);
-    text("🎯 ĐIỀU KHIỂN:", iconX, startY);
+    text("To control:", iconX, startY);
 
     fill(50);
     textSize(14);
-    text("SPACE: Bắt đầu / Chơi lại", textX, startY + line * 1);
-    text("← / A: Di chuyển trái",      textX, startY + line * 2);
-    text("→ / D: Di chuyển phải",      textX, startY + line * 3);
-    text("I: Bật/tắt hướng dẫn",       textX, startY + line * 4);
+    text("SPACE: Start / Restart", textX, startY + line * 1);
+    text("← / A: Move to the left",      textX, startY + line * 2);
+    text("→ / D: Move to the right",      textX, startY + line * 3);
+    text("I: Turn on/off the instructions",       textX, startY + line * 4);
 
     // --- Vật thể ---
     startY += line * 6;
     fill(118, 75, 162);
     textSize(16);
-    text("🧱 VẬT THỂ:", iconX, startY);
+    text("Objects:", iconX, startY);
 
     startY += line;
 
-    addLegend(iconX, startY,  color(100, 220, 100), "Platform Thường: Nhảy bình thường");
-    addLegend(iconX, startY + line, color(100, 200, 255), "Platform Di Động: Di chuyển qua lại");
-    addLegend(iconX, startY + line * 2, color(139, 69, 19), "Platform Vỡ: Chỉ dùng 1 lần");
-    addLegend(iconX, startY + line * 3, color(255, 200, 0), "Lò Xo: Super Jump!");
-    addLegend(iconX, startY + line * 4, color(150, 80, 200), "Quái Vật: Chạm là Game Over");
+    addLegend(iconX, startY,  color(100, 220, 100), "Normal platforms");
+    addLegend(iconX, startY + line, color(100, 200, 255), "Movable Platforms");
+    addLegend(iconX, startY + line * 2, color(139, 69, 19), "Breakable Platforms");
+    addLegend(iconX, startY + line * 3, color(255, 200, 0), "Spring: Super Jump!");
+    addLegend(iconX, startY + line * 4, color(150, 80, 200), "Monster: DO NOT TOUCH!!");
 
     // --- Mẹo ---
     fill(255, 150, 0);
     textSize(13);
-    text("💡 Mẹo: Đi qua biên sẽ xuất hiện ở bên kia!", iconX, startY + line * 6);
+    text("Tips: Do NOT let the borders limit you!", iconX, startY + line * 6);
 
     pop();
 }
@@ -591,3 +591,4 @@ class Particle {
   }
 
 }
+
